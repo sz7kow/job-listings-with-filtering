@@ -7,6 +7,7 @@ const App = () => {
   return (
     <S.App>
       <GlobalStyle />
+      <S.Header role="banner" />
       App
     </S.App>
   );
