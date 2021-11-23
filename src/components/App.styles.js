@@ -15,3 +15,11 @@ export const Header = styled.header`
     background-image: url(${bgHeaderDesktop});
   }
 `;
+
+export const Main = styled.main`
+  padding: 0 24px 34px;
+
+  @media (min-width: ${BREAKPOINTS.DESKTOP}) {
+    padding-bottom: 120px;
+  }
+`;
