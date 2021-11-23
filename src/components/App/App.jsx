@@ -8,7 +8,7 @@ const App = () => {
   return (
     <S.App>
       <GlobalStyle />
-      <S.Header role="banner" />
+      <S.Header />
       <S.Main>
         <JobsContainer />
       </S.Main>
