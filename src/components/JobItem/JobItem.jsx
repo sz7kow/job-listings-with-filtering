@@ -9,8 +9,6 @@ const JobItem = ({
   handleTagClick,
   job: { company, contract, isFeatured, isNew, location, logoPath, position, postedAt, tags },
 }) => {
-  console.log(handleTagClick);
-
   return (
     <S.JobItem>
       <S.Logo alt="" src={logoPath} />
