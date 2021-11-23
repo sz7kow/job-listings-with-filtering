@@ -1,5 +1,6 @@
-import { BREAKPOINTS } from "constants/breakpoints";
 import styled from "styled-components";
+
+import { BREAKPOINTS } from "constants/breakpoints";
 
 export const JobList = styled.ul`
   display: grid;

@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
 import { BREAKPOINTS } from "constants/breakpoints";
-import { FONTS } from "constants/fonts";
 import { COLORS } from "constants/colors";
+import { FONTS } from "constants/fonts";
 
 export const JobItem = styled.li`
   position: relative;

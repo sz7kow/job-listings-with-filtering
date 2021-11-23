@@ -2,8 +2,8 @@ import styled from "styled-components";
 
 import bgHeaderDesktop from "assets/svgs/bg-header-desktop.svg";
 import bgHeaderMobile from "assets/svgs/bg-header-mobile.svg";
-import { COLORS } from "constants/colors";
 import { BREAKPOINTS } from "constants/breakpoints";
+import { COLORS } from "constants/colors";
 
 export const App = styled.div``;
 
