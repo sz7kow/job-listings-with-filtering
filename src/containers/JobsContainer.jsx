@@ -13,6 +13,10 @@ const JobsContainer = () => {
 
   const handleTagClick = (tag) => !requiredTags.includes(tag) && setRequiredTags((tags) => [...tags, tag]);
 
+  const handleRequiredTagClick = (tag) => setRequiredTags((tags) => tags.splice(tags.indexOf(tag), 1));
+
+  const resetFilters = () => setRequiredTags([]);
+
   const filteredJobs = jobs.filter((job) => {
     let doesMatchCriteria = true;
 
@@ -23,7 +27,15 @@ const JobsContainer = () => {
     return doesMatchCriteria;
   });
 
-  return <Jobs handleTagClick={handleTagClick} jobs={filteredJobs} />;
+  return (
+    <Jobs
+      handleTagClick={handleTagClick}
+      handleRequiredTagClick={handleRequiredTagClick}
+      jobs={filteredJobs}
+      requiredTags={requiredTags}
+      resetFilters={resetFilters}
+    />
+  );
 };
 
 export { JobsContainer };
