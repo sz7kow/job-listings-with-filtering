@@ -5,7 +5,12 @@ import { Badge } from "components/Badge";
 import { TagList } from "components/TagList";
 import * as S from "./JobItem.styles";
 
-const JobItem = ({ job: { company, contract, isFeatured, isNew, location, logoPath, position, postedAt, tags } }) => {
+const JobItem = ({
+  handleTagClick,
+  job: { company, contract, isFeatured, isNew, location, logoPath, position, postedAt, tags },
+}) => {
+  console.log(handleTagClick);
+
   return (
     <S.JobItem>
       <S.Logo alt="" src={logoPath} />
@@ -22,12 +27,13 @@ const JobItem = ({ job: { company, contract, isFeatured, isNew, location, logoPa
           <S.DetailItem>{location}</S.DetailItem>
         </S.DetailList>
       </S.Content>
-      <TagList tags={tags} />
+      <TagList handleTagClick={handleTagClick} tags={tags} />
     </S.JobItem>
   );
 };
 
 JobItem.propTypes = {
+  handleTagClick: PropTypes.func.isRequired,
   job: PropTypes.shape({
     company: PropTypes.string.isRequired,
     contract: PropTypes.string.isRequired,

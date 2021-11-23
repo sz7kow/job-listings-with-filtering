@@ -4,17 +4,18 @@ import PropTypes from "prop-types";
 import { JobItem } from "components/JobItem";
 import * as S from "./JobList.styles";
 
-const JobList = ({ jobs }) => {
+const JobList = ({ handleTagClick, jobs }) => {
   return (
     <S.JobList>
       {jobs.map((job) => (
-        <JobItem key={job.id} job={job} />
+        <JobItem handleTagClick={handleTagClick} job={job} key={job.id} />
       ))}
     </S.JobList>
   );
 };
 
 JobList.propTypes = {
+  handleTagClick: PropTypes.func.isRequired,
   jobs: PropTypes.arrayOf(
     PropTypes.shape({
       company: PropTypes.string.isRequired,
