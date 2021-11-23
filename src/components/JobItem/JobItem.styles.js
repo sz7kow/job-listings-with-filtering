@@ -70,7 +70,7 @@ export const Company = styled.p`
 
 export const Position = styled.h1`
   font: 700 15px/24px ${FONTS.PRIMARY};
-  margin-bottom: 8px;
+  margin-bottom: 6px;
   color: ${COLORS.OUTER_SPACE};
   transition: color 0.1s ease-in-out;
   cursor: pointer;
