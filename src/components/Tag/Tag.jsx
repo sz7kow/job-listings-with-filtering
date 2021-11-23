@@ -6,10 +6,10 @@ import * as S from "./Tag.styles";
 
 const Tag = ({ children, isRemovable, onClick, value }) => {
   return (
-    <S.Tag isRemovable={isRemovable} onClick={() => onClick(value)}>
+    <S.Tag isRemovable={isRemovable} onClick={() => !isRemovable && onClick(value)}>
       <S.TagContent>{children}</S.TagContent>
       {isRemovable && (
-        <S.RemoveButton>
+        <S.RemoveButton onClick={() => isRemovable && onClick(value)}>
           <img alt="Remove" src={iconRemove} />
         </S.RemoveButton>
       )}

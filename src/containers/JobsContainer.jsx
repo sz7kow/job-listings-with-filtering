@@ -8,12 +8,13 @@ const JobsContainer = () => {
   const [requiredTags, setRequiredTags] = useState([]);
 
   useEffect(() => {
-    setJobs(JSON.parse(JSON.stringify(jobsData)));
+    const parsedJobs = JSON.parse(JSON.stringify(jobsData));
+    setJobs(parsedJobs);
   }, []);
 
   const handleTagClick = (tag) => !requiredTags.includes(tag) && setRequiredTags((tags) => [...tags, tag]);
 
-  const handleRequiredTagClick = (tag) => setRequiredTags((tags) => tags.splice(tags.indexOf(tag), 1));
+  const handleRequiredTagClick = (clickedTag) => setRequiredTags((tags) => tags.filter((tag) => tag !== clickedTag));
 
   const resetFilters = () => setRequiredTags([]);
 
