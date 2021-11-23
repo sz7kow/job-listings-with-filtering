@@ -41,7 +41,7 @@ export const Content = styled.div`
   margin: 0 0 16px;
   padding-bottom: 16px;
   flex-grow: 1;
-  border-bottom: 1px solid #b7c4c4;
+  border-bottom: 1px solid ${COLORS.SILVER_SAND};
 
   @media (min-width: ${BREAKPOINTS.DESKTOP}) {
     margin: 0 24px;
