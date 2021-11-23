@@ -12,4 +12,4 @@ Badge.propTypes = {
   isDark: PropTypes.bool,
 };
 
-export default Badge;
+export { Badge };

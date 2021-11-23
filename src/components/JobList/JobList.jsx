@@ -1,18 +1,20 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-import { JobList } from "components/JobList";
-import * as S from "./Jobs.styles";
+import { JobItem } from "components/JobItem";
+import * as S from "./JobList.styles";
 
-const Jobs = ({ jobs }) => {
+const JobList = ({ jobs }) => {
   return (
-    <S.Jobs>
-      <JobList jobs={jobs} />
-    </S.Jobs>
+    <S.JobList>
+      {jobs.map((job) => (
+        <JobItem key={job.id} job={job} />
+      ))}
+    </S.JobList>
   );
 };
 
-Jobs.propTypes = {
+JobList.propTypes = {
   jobs: PropTypes.arrayOf(
     PropTypes.shape({
       company: PropTypes.string.isRequired,
@@ -28,4 +30,4 @@ Jobs.propTypes = {
   ).isRequired,
 };
 
-export default Jobs;
+export { JobList };

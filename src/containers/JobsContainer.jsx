@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-import Jobs from "components/Jobs";
+import { Jobs } from "components/Jobs";
 import jobsData from "data/json/jobs.json";
 
 const JobsContainer = () => {

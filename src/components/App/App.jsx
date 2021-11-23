@@ -1,8 +1,8 @@
 import React from "react";
 
-import * as S from "./App.styles";
-import { GlobalStyle } from "components/GlobalStyle.styles";
 import { JobsContainer } from "containers/JobsContainer";
+import * as S from "./App.styles";
+import { GlobalStyle } from "./GlobalStyle.styles";
 
 const App = () => {
   return (

@@ -11,4 +11,4 @@ Tag.propTypes = {
   children: PropTypes.node.isRequired,
 };
 
-export default Tag;
+export { Tag };

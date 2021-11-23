@@ -1,8 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-import Badge from "components/Badge";
-import TagList from "components/TagList";
+import { Badge } from "components/Badge";
+import { TagList } from "components/TagList";
 import * as S from "./JobItem.styles";
 
 const JobItem = ({ job: { company, contract, isFeatured, isNew, location, logoPath, position, postedAt, tags } }) => {
@@ -41,4 +41,4 @@ JobItem.propTypes = {
   }).isRequired,
 };
 
-export default JobItem;
+export { JobItem };
