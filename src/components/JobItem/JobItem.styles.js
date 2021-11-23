@@ -8,15 +8,16 @@ export const JobItem = styled.li`
   position: relative;
   display: flex;
   flex-direction: column;
-  padding: 37px 24px 24px;
+  padding: 37px 24px 24px 19px;
   background-color: ${COLORS.WHITE};
   box-shadow: 0px 15px 20px -5px rgba(13, 113, 130, 0.15); // TODO: Move to COLORS
+  border-left: 5px solid ${({ isFeatured }) => (isFeatured ? COLORS.CADET_BLUE : COLORS.WHITE)};
   border-radius: 5px;
 
   @media (min-width: ${BREAKPOINTS.DESKTOP}) {
     flex-direction: row;
     align-items: center;
-    padding: 32px 40px;
+    padding: 32px 40px 32px 35px;
   }
 `;
 
@@ -53,12 +54,12 @@ export const Header = styled.div`
   display: flex;
   align-items: center;
   min-height: 24px;
-  margin-bottom: 8px;
+  margin-bottom: 10px;
 `;
 
 export const Company = styled.p`
   font: 700 13px/15px ${FONTS.PRIMARY};
-  margin-right: 16px;
+  margin-right: 14px;
   color: ${COLORS.CADET_BLUE};
 
   @media (min-width: ${BREAKPOINTS.DESKTOP}) {

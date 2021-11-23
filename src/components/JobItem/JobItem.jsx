@@ -10,7 +10,7 @@ const JobItem = ({
   job: { company, contract, isFeatured, isNew, location, logoPath, position, postedAt, tags },
 }) => {
   return (
-    <S.JobItem>
+    <S.JobItem isFeatured={isFeatured}>
       <S.Logo alt="" src={logoPath} />
       <S.Content>
         <S.Header>
