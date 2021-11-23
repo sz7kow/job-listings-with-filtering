@@ -92,7 +92,6 @@ export const DetailItem = styled.li`
   font: 500 13px/24px ${FONTS.PRIMARY};
   margin-right: 8px;
   letter-spacing: -0.1px;
-  text-transform: capitalize;
   color: ${COLORS.ROMAN_SILVER};
 
   @media (min-width: ${BREAKPOINTS.DESKTOP}) {
