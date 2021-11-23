@@ -59,7 +59,7 @@ export const Header = styled.div`
 
 export const Company = styled.p`
   font: 700 13px/15px ${FONTS.PRIMARY};
-  margin-right: 14px;
+  margin-right: 16px;
   color: ${COLORS.CADET_BLUE};
 
   @media (min-width: ${BREAKPOINTS.DESKTOP}) {
